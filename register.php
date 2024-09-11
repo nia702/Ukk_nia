@@ -5,9 +5,15 @@
  <meta name="viemport" content="width=device-width-width, intial-scale=1">
  <title>Website Galeri Foto</title>
  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-</haed>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<style>
+  .bg-image {
+    background-image: url('assets/img/lucu.jpg');
+    height: 200vh;
+  }
+</style>
+</head>
+  <body class="bg-image"> 
+   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +31,13 @@
 
   <div class="container py-5">
     <div class="row justify-content-center">
-      <div class="col -md-4">
+      <div class="col-md-4">
         <div class="card">
           <div class="card-body bg-light">
             <div class="text-center">
               <h5>Daftar Akun Baru</h5>
             </div>
-            <form action="config/aksi_register.php" method="POST">
+            <form action="config/aksi_register.php" method="post">
               <label class="form-label">Username</label>
               <input type="text" name="username" class="form-control" required>
               <label class="form-label">Password</label>

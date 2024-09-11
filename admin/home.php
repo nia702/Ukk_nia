@@ -20,8 +20,14 @@ if ($_SESSION['status'] != 'login') {
   <title>Website Galeri Foto</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+<style>
+  .bg-image {
+    background-image: url('../assets/img/lucu.jpg');
+    height: 200vh;
+  }
+</style>
 </head>
-<body>
+  <body class="bg-image">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
@@ -57,7 +63,7 @@ if ($_SESSION['status'] != 'login') {
           <div class="col-md-3 mt-2">
             <div class="card">
               <img style="height: 12rem;" src="../assets/img/<?php echo $data['lokasifile'] ?>" class="card-img-top" title="<?php echo $data['judulfoto'] ?>">
-              <div class="card-footer text-center">
+              <div class="card-footer text-center"> 
                 <?php 
                 $fotoid = $data['fotoid'];
                 $ceksuka = mysqli_query($koneksi, "SELECT * FROM likefoto WHERE fotoid='$fotoid' AND userid='$userid'");

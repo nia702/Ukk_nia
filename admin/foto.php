@@ -18,8 +18,14 @@ if ($_SESSION['status'] != 'login') {
  <meta name="viemport" content="width=device-width-width, intial-scale=1">
  <title>Website Galeri Foto</title>
  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+<style>
+  .bg-image {
+    background-image: url('../assets/img/lucu.jpg');
+    height: 200vh;
+  }
+</style>
 </head>
-<body>
+  <body class="bg-image">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
@@ -95,7 +101,7 @@ if ($_SESSION['status'] != 'login') {
                   <td><img src="../assets/img/<?php echo $data['lokasifile'] ?> "width="100"></td>
                   <td><?php echo $data['judulfoto'] ?></td>
                   <td><?php echo $data['deskripsifoto'] ?></td>
-                  <td><?php echo $data['tanggalunggah'] ?></
+                  <td><?php echo $data['tanggalunggah'] ?></td>
                   <td>                   
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit<?php echo $data['fotoid'] ?>">
                       Edit

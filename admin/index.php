@@ -1,4 +1,4 @@
-<?php
+ <?php
 session_start(); 
 include '../config/koneksi.php';
 $userid = $_SESSION['userid'];
@@ -20,9 +20,14 @@ if ($_SESSION['status'] !='login') {
  <title>Website Galeri Foto</title>
  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-
+<style>
+  .bg-image {
+    background-image: url('../assets/img/lucu.jpg');
+    height: 200vh;
+  }
+</style>
 </head>
-<body>
+  <body class="bg-image">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="index.php">Website Galeri Foto</a>
@@ -37,11 +42,11 @@ if ($_SESSION['status'] !='login') {
         </div>
 
         <a href="../config/aksi_logout.php" class="btn btn-outline-danger m-1">keluar</a>
-      </div>
+      </div> 
     </div>
   </nav>
 
-  <div class="container mt-2">
+  <div class="container mt-3">
     <div class="row">
       <?php
       $query = mysqli_query($koneksi, "SELECT * FROM foto INNER JOIN user ON foto.userid=user.userid INNER JOIN album ON foto.albumid=album.albumid");
